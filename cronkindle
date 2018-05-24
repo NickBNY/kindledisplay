@@ -1,0 +1,5 @@
+30 * * * * eipc -c
+30 * * * * wget -s http://a/rss.txt && wget http://a/rss.txt -O - | sh /opt/hack/disp.sh
+1 * * * * eipc -c
+1 * * * * wget -s http://a/1 && wget http://a/1 -O - | sh /opt/hack/disp.sh
+*/5 * * * * sh /opt/hack/dispweather.sh & eips 80 40 "$(date '+%Y-%m-%d %H:%M')" && I=$(lipc-get-prop  com.lab126.powerd battLevel) & eips 97 40 "   " & eips 97 40 $I

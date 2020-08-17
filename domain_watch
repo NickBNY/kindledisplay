@@ -1,0 +1,1 @@
+while :; do  whois fdnbank.com | grep 'Domain Name\|Domain St\|Updated\|Expiry' & echo -e "\a" & sleep 600; done
